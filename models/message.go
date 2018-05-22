@@ -16,11 +16,13 @@ type Message struct {
 }
 
 func makeMessageID() string {
-	return uuid.NewV1().String()
+	uuid, _ := uuid.NewV1().String()
+	return uuid
 }
 
 func makeAckID() string {
-	return uuid.NewV1().String()
+	uuid, _ := uuid.NewV1().String()
+	return uuid
 }
 
 // NewMessage return initialized Message
