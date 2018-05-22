@@ -81,7 +81,7 @@ func setupDatastore(t *testing.T) {
 		if err != nil {
 			t.Fatalf("failed to initialize fixture, got err %v", err)
 		}
-		if err := f.LoadSQL("fixture/setup_table.sql"); err != nil {
+		if err := f.Load("fixture/setup_table.sql"); err != nil {
 			t.Fatalf("failed to execute fixture, got err %v", err)
 		}
 	}
